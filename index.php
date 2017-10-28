@@ -11,8 +11,12 @@
 	$contents_today = json_decode($json_today);
 	$temp = $contents_today->main->temp;
 	$status = $contents_today->weather[0]->description;
+	$visibility = $contents_today->visibility;
+	$wind_speed = $contents_today->wind->speed;
 	echo($temp);
 	echo($status);
+	echo($visibility);
+	echo("wind speed" . $wind_speed);
 	$request = requestMaker($city,'forecast/daily',$api_key,true);
 	$json_prognosis = file_get_contents($request);
 	$contents_prognosis = json_decode($json_prognosis);
