@@ -55,7 +55,10 @@
 	for($x=0;$x<5;$x++){
 	echo($temps_to_readTomorrow[$x]. " ");	
 	}	
-	
+	$filename1= 'todayTemps.vml';
+	$filename2= 'tomorrowsTemps.vml';
+	$addedContent = '<?xml version="1.0?><vxml version="1.0"><prompt><audio src="pozdrav.raw" /></prompt></vxml>'
+	file_put_contents($filename1,$addedContent);
 
 
 ?>
